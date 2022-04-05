@@ -18,21 +18,24 @@ html {
     --desaturated-blue: hsl(235, 45%, 61%);
     --pale-blue: hsl(236, 100%, 87%);
 
+
     /*Typography*/
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
+    color: #fff;
 }
 
 body {
     background-color: var(--very-dark-blue);
     width: 100vw;
     height: 100vh;
+    max-width: 1440px;
     overflow: hidden;
     display: flex;
 }
 
 .container {
-    margin: auto;    
+    margin: auto;
     width: 1120px;
     height: 530px;
     display: grid;
@@ -40,17 +43,102 @@ body {
     grid-gap: 30px;
 }
 
-.card{
+.profile {
+    grid-row: 1 / 3;
+    background-color: var(--dark-blue);
     border-radius: 14px;
 }
 
-.profile {
+.profile-header {
     background-color: var(--profile);
-    grid-row: 1 / 3;
+    height: 355px;
+    border-radius: 14px;
+    padding: 35px 30px;
 }
 
-.work {
+.profile-header p {
+    margin-top: 45px;
+    font-weight: 300;
+    font-size: 0.61rem;
+    color: var(--pale-blue);
+}
+
+.profile-header h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.56rem;
+    line-height: 2.00rem;
+}
+
+.profile-avatar img {
+    width: 80px;
+    height: auto;
+    border: 3px solid var(--pale-blue);
+    border-radius: 50%;
+}
+
+.time-course {
+    margin: 30px;
+    cursor: pointer;
+    width: fit-content;
+    color: var(--social);
+}
+
+.time-course.active,
+.time-course:hover {
+    color: var(--pale-blue);
+}
+
+.card {
+    border-radius: 14px;
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.card:hover{
+    background-color: var(--desaturated-blue);
+}
+
+.stats-menu {
+    margin-top: -14px;
+    border-radius: 14px 14px 0 0;
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 35px 0 35px;
+}
+.menu{
+    background-image: url(../images/icon-ellipsis.svg);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.card h3{
+    margin-top: 25px;
+    margin-left: 35px;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.card p{
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 0.61rem;
+    color: var(--pale-blue);
+    margin-left: 35px;
+}
+
+.work-header {
     background-color: var(--work);
+    height: 59px;
+    border-radius: 14px 14px 0 0;
+    background-image: url(../images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: 85%;
+    z-index: -1;
 }
 
 .play {
